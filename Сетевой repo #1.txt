@@ -1,0 +1,133 @@
+git clone https://github.com/YandexLyceum/human.git
+git branch -a
+	* master
+	  remotes/origin/HEAD -> origin/master
+	  remotes/origin/boots
+	  remotes/origin/buttons
+	  remotes/origin/demo
+	  remotes/origin/hat
+	  remotes/origin/master
+cat human.txt
+         ===
+      == = = ==
+       =  =  =
+        = = =
+     == ===== ==
+    =  =     =  =
+    =  =     =  =
+     == =   = ==
+        = = =
+        = = =
+       === ===
+
+git diff origin/boots
+    diff --git a/README b/README
+    new file mode 100644
+    index 0000000..6988c8d
+    --- /dev/null
+    +++ b/README
+    @@ -0,0 +1,3 @@
+    +Create release branch with human (master) in boots (boots branch) and hat (hat branch) with nice buttons on his jacket (buttons branch)
+    +
+    +You must receive some image as in demo branch
+    diff --git a/human.txt b/human.txt
+    index acd4c87..e9cafd9 100644
+    --- a/human.txt
+    +++ b/human.txt
+    @@ -8,6 +8,5 @@
+      == =   = ==
+         = = =
+         = = =
+    -  ==== ====
+    - ===== =====
+    +   === ===
+
+git diff origin/buttons
+    diff --git a/README b/README
+    index 975e13a..6988c8d 100644
+    --- a/README
+    +++ b/README
+    @@ -1,3 +1,3 @@
+    -Create release branch with human (master) in boots (boots branch) and hat (hat branch).
+    +Create release branch with human (master) in boots (boots branch) and hat (hat branch) with nice buttons on his jacket (buttons branch)
+    
+     You must receive some image as in demo branch
+    diff --git a/human.txt b/human.txt
+    index eec3154..e9cafd9 100644
+    --- a/human.txt
+    +++ b/human.txt
+    @@ -3,9 +3,9 @@
+        =  =  =
+         = = =
+      == ===== ==
+    -=  =  0  =  =
+    -=  =  0  =  =
+    - == = 0 = ==
+    +=  =     =  =
+    +=  =     =  =
+    + == =   = ==
+         = = =
+         = = =
+        === ===
+git diff origin/hat
+    diff --git a/README b/README
+    new file mode 100644
+    index 0000000..6988c8d
+    --- /dev/null
+    +++ b/README
+    @@ -0,0 +1,3 @@
+    +Create release branch with human (master) in boots (boots branch) and hat (hat branch) with nice buttons on his jacket (buttons branch)
+    +
+    +You must receive some image as in demo branch
+    diff --git a/human.txt b/human.txt
+    index 8ac7287..e9cafd9 100644
+    --- a/human.txt
+    +++ b/human.txt
+    @@ -1,6 +1,4 @@
+    -    =====
+    - ===========
+    -  ==     ==
+    +     ===
+       == = = ==
+        =  =  =
+         = = =
+git diff origin/master origin/demo
+    diff --git a/README b/README
+    index 6988c8d..975e13a 100644
+    --- a/README
+    +++ b/README
+    @@ -1,3 +1,3 @@
+    -Create release branch with human (master) in boots (boots branch) and hat (hat branch) with nice buttons on his jacket (buttons branch)
+    +Create release branch with human (master) in boots (boots branch) and hat (hat branch).
+    
+     You must receive some image as in demo branch
+    diff --git a/human.txt b/human.txt
+    index e9cafd9..4622f57 100644
+    --- a/human.txt
+    +++ b/human.txt
+    @@ -1,12 +1,15 @@
+    -     ===
+    +    =====
+    + ===========
+    +  ==     ==
+       == = = ==
+        =  =  =
+         = = =
+      == ===== ==
+    -=  =     =  =
+    -=  =     =  =
+    - == =   = ==
+    +=  =  0  =  =
+    +=  =  0  =  =
+    + == = 0 = ==
+git branch boots_buttons
+git merge origin/boots
+    Merge made by the 'recursive' strategy.
+     human.txt | 3 ++-
+     1 file changed, 2 insertions(+), 1 deletion(-)
+git merge origin/buttons
+    Auto-merging human.txt
+    Merge made by the 'recursive' strategy.
+     human.txt | 6 +++---
+     1 file changed, 3 insertions(+), 3 deletions(-)
+git branch master
